@@ -1,5 +1,5 @@
 {
-    "name": "ocramius/package-versions",
+    "name": "atheon/package-versions",
     "description": "Composer plugin that provides efficient querying for installed package versions (no runtime IO)",
     "type": "composer-plugin",
     "license": "MIT",
@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "php":                 "^7.4.0",
+        "php":                 "^7.4.0 || ^8.0",
         "composer-plugin-api": "^1.1.0 || ^2.0"
     },
     "require-dev": {
@@ -20,6 +20,9 @@
         "ext-zip":                  "^1.15.0",
         "doctrine/coding-standard": "^7.0.2",
         "vimeo/psalm":              "^3.9.3"
+    },
+    "replace": {
+        "ocramius/package-versions": "self.version"
     },
     "autoload": {
         "psr-4": {
